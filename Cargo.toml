@@ -1,0 +1,25 @@
+[package]
+name = "djrip"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.71"
+async-trait = "0.1.68"
+clap = { version = "4.3.1", features = ["derive"] }
+futures-util = "0.3.28"
+indicatif = "0.17.5"
+log = "0.4.18"
+music-deduper = { git = "https://github.com/akosnad/music-deduper", version = "0.1.0" }
+reqwest = { version = "0.11.18", features = ["cookies"] }
+serde = { version = "1.0.163", features = ["derive"] }
+serde_with = "3.0.0"
+serde_yaml = "0.9.21"
+simple_logger = "4.1.0"
+tokio = { version = "1.28.2", features = ["full"] }
+url = "2.4.0"
+
+[profile.release]
+opt-level = 1
